@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout | HANA SKIN</title>
+
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+  <style>
+    :root{--accent:#aa8673;--light-yellow:#fff9e6;}
+    body{font-family:'Poppins',sans-serif;color:#333;}
+    .navbar{padding:1rem 1rem;background:#fff;border-bottom:1px solid #eee}
+    .navbar .nav-link{color:#000!important}
+    .navbar .nav-link:hover,.navbar .navbar-brand:hover{color:var(--accent)!important}
+    .navbar .navbar-brand{font-weight:700;font-size:1.5rem;color:#000!important;text-decoration:none}
+
+    .checkout-hero{
+      background:url('checkout-hero.jpg') center/cover no-repeat;
+      height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+    }
+    .checkout-hero h1{font-size:3rem;font-weight:700;text-shadow:2px 2px 8px rgba(0,0,0,.6)}
+
+    .order-summary{background:#fff;border:1px solid #eee;border-radius:6px;padding:2rem;margin-bottom:2rem}
+    .order-summary th{font-weight:600}
+    .order-summary td{padding:.4rem .25rem}
+
+    .form-section{background:#fff;border:1px solid #eee;border-radius:6px;padding:2rem}
+
+    .btn-accent{background:var(--accent);color:#fff;font-weight:600}
+    .btn-accent:hover{background:#8b6d5d}
+
+    .footer{background:#f2f2f2;text-align:center;font-size:.9rem;padding:2rem 0;margin-top:3rem}
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand mx-auto" href="index.html">HANA SKIN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ml-auto">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
+          <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
+          <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  
+  <div class="checkout-hero">
+    <h1>Checkout</h1>
+  </div>
+
+
+  <div class="container my-5">
+
+    
+    <div class="order-summary">
+      <h4 class="mb-3">Order Summary</h4>
+      <table class="table table-borderless mb-0">
+        <thead>
+          <tr>
+            <th>Product</th><th class="text-center">Qty</th><th class="text-right">Price (₹)</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr><td>Rice Milk Cleanser</td><td class="text-center">1</td><td class="text-right">1,499</td></tr>
+          <tr><td>Matcha Detox Clay Mask</td><td class="text-center">2</td><td class="text-right">3,798</td></tr>
+          <tr><td class="font-weight-bold">Subtotal</td><td></td><td class="text-right font-weight-bold">5,297</td></tr>
+          <tr><td>Shipping (Free over ₹2,500)</td><td></td><td class="text-right">0</td></tr>
+          <tr><td class="font-weight-bold">Total</td><td></td><td class="text-right font-weight-bold">5,297</td></tr>
+        </tbody>
+      </table>
+    </div>
+
+    
+    <div class="form-section">
+      <h4 class="mb-3">Shipping Details</h4>
+      <form id="checkoutForm">
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="name">Full Name</label>
+            <input type="text" class="form-control" id="name" required>
+          </div>
+          <div class="form-group col-md-6">
+            <label for="email">Email</label>
+            <input type="email" class="form-control" id="email" required>
+          </div>
+        </div>
+        <div class="form-group">
+          <label for="address">Street Address</label>
+          <input type="text" class="form-control" id="address" required>
+        </div>
+        <div class="form-row">
+          <div class="form-group col-md-6">
+            <label for="city">City</label>
+            <input type="text" class="form-control" id="city" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="state">State</label>
+            <input type="text" class="form-control" id="state" required>
+          </div>
+          <div class="form-group col-md-3">
+            <label for="zip">ZIP Code</label>
+            <input type="text" class="form-control" id="zip" required>
+          </div>
+        </div>
+
+        <h4 class="mt-4 mb-3">Payment</h4>
+        <div class="form-group">
+          <div class="custom-control custom-radio">
+            <input type="radio" id="cod" name="payment" class="custom-control-input" checked>
+            <label class="custom-control-label" for="cod">Cash on Delivery</label>
+          </div>
+          <div class="custom-control custom-radio">
+            <input type="radio" id="upi" name="payment" class="custom-control-input">
+            <label class="custom-control-label" for="upi">UPI / NetBanking</label>
+          </div>
+        </div>
+
+        <button type="submit" class="btn btn-accent btn-block mt-4">Place Order</button>
+      </form>
+    </div>
+  </div>
+
+  
+  <footer class="footer">
+    © 2025 HANA SKIN · Checkout
+  </footer>
+
+  
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+  <script>
+    document.getElementById('checkoutForm').addEventListener('submit',function(e){
+      e.preventDefault();
+      alert('Thank you! Your order has been placed.');
+     
+    });
+  </script>
+</body>
+</html>
