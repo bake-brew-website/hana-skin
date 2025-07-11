@@ -11,22 +11,11 @@
 
   <style>
     body{font-family:'Poppins',sans-serif;line-height:1.7;color:#333}
-    .navbar{padding:1.2rem 1rem;background:#fff;border-bottom:1px solid #eee} .navbar .nav-link {
-  color: #000 !important;
-} .navbar .navbar-brand {
-  color: #000 !important;
-  font-weight: 700;
-  font-size: 1.5rem;
-  text-decoration: none;
+  
+.navbar .container {
+  padding-left: 16px;
+  padding-right: 16px;
 }
-
-.navbar .navbar-brand:hover {
-  color: #aa8673 !important; /* optional hover effect */
-}
-
-.navbar .nav-link:hover {
-  color: #aa8673 !important; 
-} 
 
     .hero-about{background:url('about-hero-hana.jpg') center/cover no-repeat;height:70vh;display:flex;align-items:center;justify-content:center;color:#fff;text-shadow:2px 2px 8px rgba(0,0,0,.6)}
     .hero-about h1{font-size:3.5rem;font-weight:700}
@@ -48,15 +37,16 @@
 <body>
 
   
-  <nav class="navbar navbar-expand-lg fixed-top">
+  <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top border-bottom">
   <div class="container">
-    <a class="navbar-brand mx-auto font-weight-bold" href="index.html">HANA SKIN</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+    <a class="navbar-brand font-weight-bold" href="index.html">HANA SKIN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
     </button>
 
-    <div class="collapse navbar-collapse" id="navbarNav">
-      <ul class="navbar-nav ml-auto">
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
         <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
         <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
         <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
@@ -68,6 +58,7 @@
     </div>
   </div>
 </nav>
+
 
 
  

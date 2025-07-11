@@ -9,29 +9,131 @@
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
   <style>
-    :root{--accent:#aa8673;--light-yellow:#fff9e6;}
-    body{font-family:'Poppins',sans-serif;color:#333;}
-    .navbar{padding:1rem 1rem;background:#fff;border-bottom:1px solid #eee}
-    .navbar .nav-link{color:#000!important}
-    .navbar .nav-link:hover,.navbar .navbar-brand:hover{color:var(--accent)!important}
-    .navbar .navbar-brand{font-weight:700;font-size:1.5rem;color:#000!important;text-decoration:none}
-
-    .checkout-hero{
-      background:url('checkout-hero.jpg') center/cover no-repeat;
-      height:50vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
+    :root {
+      --accent: #aa8673;
+      --light-yellow: #fff9e6;
     }
-    .checkout-hero h1{font-size:3rem;font-weight:700;text-shadow:2px 2px 8px rgba(0,0,0,.6)}
 
-    .order-summary{background:#fff;border:1px solid #eee;border-radius:6px;padding:2rem;margin-bottom:2rem}
-    .order-summary th{font-weight:600}
-    .order-summary td{padding:.4rem .25rem}
+    body {
+      font-family: 'Poppins', sans-serif;
+      color: #333;
+      background: #fff;
+    }
 
-    .form-section{background:#fff;border:1px solid #eee;border-radius:6px;padding:2rem}
+	  .navbar-toggler {
+  border: none;
+  outline: none;
+}
 
-    .btn-accent{background:var(--accent);color:#fff;font-weight:600}
-    .btn-accent:hover{background:#8b6d5d}
+.navbar-toggler-icon {
+  display: inline-block;
+  width: 1.5em;
+  height: 1.5em;
+  vertical-align: middle;
+  background-image: url("data:image/svg+xml,%3csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3e%3cpath stroke='rgba%280, 0, 0, 0.7%29' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 100% 100%;
+}
 
-    .footer{background:#f2f2f2;text-align:center;font-size:.9rem;padding:2rem 0;margin-top:3rem}
+    .navbar {
+      background: #fff;
+      padding: 1rem 0.5rem;
+      border-bottom: 1px solid #eee;
+    }
+
+    .navbar .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .navbar .navbar-brand {
+      font-weight: 700;
+      font-size: 1.5rem;
+      color: #000 !important;
+    }
+
+    .navbar .nav-link {
+      color: #000 !important;
+    }
+
+    .navbar .nav-link:hover,
+    .navbar .navbar-brand:hover {
+      color: var(--accent) !important;
+    }
+
+    .checkout-hero {
+      background: url('checkout-hero.jpg') center/cover no-repeat;
+      height: 50vh;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      text-align: center;
+      color: #fff;
+    }
+
+    .checkout-hero h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.6);
+    }
+
+    .order-summary, .form-section {
+      background: #fff;
+      border: 1px solid #eee;
+      border-radius: 6px;
+      padding: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    .order-summary th {
+      font-weight: 600;
+    }
+
+    .order-summary td {
+      padding: 0.4rem 0.25rem;
+    }
+
+    .btn-accent {
+      background: var(--accent);
+      color: #fff;
+      font-weight: 600;
+    }
+
+    .btn-accent:hover {
+      background: #8b6d5d;
+    }
+
+    .footer {
+      background: #f2f2f2;
+      text-align: center;
+      font-size: 0.9rem;
+      padding: 2rem 0;
+      margin-top: 3rem;
+    }
+
+    @media (max-width: 576px) {
+      .checkout-hero h1 {
+        font-size: 2rem;
+        padding: 0 10px;
+      }
+
+      .form-section, .order-summary {
+        padding: 1.5rem 1rem;
+      }
+
+      .navbar .navbar-brand {
+        font-size: 1.3rem;
+      }
+
+      .navbar .nav-link {
+        font-size: 0.95rem;
+      }
+
+      .btn-accent {
+        font-size: 1rem;
+      }
+    }
   </style>
 </head>
 <body>
@@ -39,12 +141,12 @@
   <!-- Navbar -->
   <nav class="navbar navbar-expand-lg fixed-top">
     <div class="container">
-      <a class="navbar-brand mx-auto" href="index.html">HANA SKIN</a>
+      <a class="navbar-brand" href="index.html">HANA SKIN</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
         <span class="navbar-toggler-icon"></span>
       </button>
-      <div class="collapse navbar-collapse" id="navbarNav">
-        <ul class="navbar-nav ml-auto">
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
           <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
           <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
           <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
@@ -57,34 +159,30 @@
     </div>
   </nav>
 
-  
+  <!-- Hero -->
   <div class="checkout-hero">
     <h1>Checkout</h1>
   </div>
 
-
   <div class="container my-5">
-
-    
+    <!-- Order Summary -->
     <div class="order-summary">
       <h4 class="mb-3">Order Summary</h4>
       <table class="table table-borderless mb-0">
         <thead>
           <tr>
-            <th>Product</th><th class="text-center">Qty</th><th class="text-right">Price (₹)</th>
+            <th>Product</th>
+            <th class="text-center">Qty</th>
+            <th class="text-right">Price (₹)</th>
           </tr>
         </thead>
-        <tbody>
-          <tr><td>Rice Milk Cleanser</td><td class="text-center">1</td><td class="text-right">1,499</td></tr>
-          <tr><td>Matcha Detox Clay Mask</td><td class="text-center">2</td><td class="text-right">3,798</td></tr>
-          <tr><td class="font-weight-bold">Subtotal</td><td></td><td class="text-right font-weight-bold">5,297</td></tr>
-          <tr><td>Shipping (Free over ₹2,500)</td><td></td><td class="text-right">0</td></tr>
-          <tr><td class="font-weight-bold">Total</td><td></td><td class="text-right font-weight-bold">5,297</td></tr>
+        <tbody id="cart-items">
+          <!-- JS will inject cart rows here -->
         </tbody>
       </table>
     </div>
 
-    
+    <!-- Shipping Form -->
     <div class="form-section">
       <h4 class="mb-3">Shipping Details</h4>
       <form id="checkoutForm">
@@ -134,19 +232,59 @@
     </div>
   </div>
 
-  
+  <!-- Footer -->
   <footer class="footer">
     © 2025 HANA SKIN · Checkout
   </footer>
 
-  
+  <!-- Scripts -->
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
   <script>
-    document.getElementById('checkoutForm').addEventListener('submit',function(e){
+    const cart = JSON.parse(localStorage.getItem('cart')) || [];
+    const cartItemsContainer = document.getElementById('cart-items');
+    let subtotal = 0;
+
+    if (cart.length === 0) {
+      cartItemsContainer.innerHTML = `<tr><td colspan="3" class="text-center">Your cart is empty.</td></tr>`;
+    } else {
+      const itemCount = {};
+      cart.forEach(item => {
+        const key = item.name;
+        if (itemCount[key]) {
+          itemCount[key].qty += 1;
+        } else {
+          itemCount[key] = { price: parseInt(item.price), qty: 1 };
+        }
+      });
+
+      for (const name in itemCount) {
+        const item = itemCount[name];
+        const price = item.price * item.qty;
+        subtotal += price;
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
+          <td>${name}</td>
+          <td class="text-center">${item.qty}</td>
+          <td class="text-right">₹${price.toLocaleString()}</td>
+        `;
+        cartItemsContainer.appendChild(row);
+      }
+
+      const summaryRows = `
+        <tr><td class="font-weight-bold">Subtotal</td><td></td><td class="text-right font-weight-bold">₹${subtotal.toLocaleString()}</td></tr>
+        <tr><td>Shipping (Free over ₹2,500)</td><td></td><td class="text-right">₹0</td></tr>
+        <tr><td class="font-weight-bold">Total</td><td></td><td class="text-right font-weight-bold">₹${subtotal.toLocaleString()}</td></tr>
+      `;
+      cartItemsContainer.insertAdjacentHTML('beforeend', summaryRows);
+    }
+
+    document.getElementById('checkoutForm').addEventListener('submit', function (e) {
       e.preventDefault();
       alert('Thank you! Your order has been placed.');
-     
+      localStorage.removeItem('cart');
+      location.reload();
     });
   </script>
 </body>

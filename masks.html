@@ -5,27 +5,25 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Masks • HANA SKIN</title>
 
-  
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
 
-  
   <style>
     :root{--accent:#aa8673;--light-yellow:#fff9e6;}
     body{font-family:'Poppins',sans-serif;color:#333;}
     .announcement-bar{background:#f8f8f8;text-align:center;padding:10px 0;font-size:14px}
-    .navbar{background:#fff;padding:20px 40px;display:flex;justify-content:space-between;align-items:center;border-bottom:1px solid #eee;position:sticky;top:0;z-index:1000}
-    .logo{font-weight:600;font-size:20px;text-decoration:none;color:#000}
-    .nav-menu{display:flex;gap:20px;list-style:none;margin:0}
-    .nav-menu a{color:#000;font-weight:500;text-decoration:none}
+   .navbar .container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
 
-    
+
+
     .category-hero{
       background:url('masks-hero.jpg') center/cover no-repeat;
       height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
     }
 
-   
     .grid-products{
       display:flex;flex-wrap:wrap;justify-content:center;gap:26px;max-width:1200px;margin:0 auto;padding:60px 20px;
     }
@@ -37,48 +35,77 @@
     .img-wrap-slide .hover-img{z-index:2;transform:translateX(100%)}
     .img-wrap-slide:hover .main-img{transform:translateX(-100%)}
     .img-wrap-slide:hover .hover-img{transform:translateX(0)}
-    .add-to-cart{position:absolute;bottom:0;left:0;width:100%;background:var(--light-yellow);text-align:center;padding:12px 0;font-weight:600;font-size:14px;z-index:3;opacity:0;transition:opacity .3s}
+    .add-to-cart{position:absolute;bottom:0;left:0;width:100%;background:var(--light-yellow);text-align:center;padding:12px 0;font-weight:600;font-size:14px;z-index:3;opacity:0;transition:opacity .3s;cursor:pointer}
     .img-wrap-slide:hover .add-to-cart{opacity:1}
     .product-info{padding:14px 10px;text-align:left}
     .product-info h5{font-size:.95rem;font-weight:500;margin:0 0 4px}
     .product-info p{font-size:.85rem;color:#555;margin:0}
+@media (max-width: 768px) {
+  .grid-products {
+    flex-direction: column;
+    align-items: center;
+  }
+  .product-card {
+    width: 90% !important;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px 20px;
+  }
+  .nav-menu {
+    flex-direction: column;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  .category-hero {
+    height: 50vh;
+    font-size: 1.5rem;
+    padding: 20px;
+  }
+  .subscribe-box input {
+    width: 100%;
+    margin-bottom: 8px;
+  }
+  .subscribe-box button {
+    width: 100%;
+  }
+}
 
-   
     .footer{background:#f2f2f2;padding:2rem 0;text-align:center;font-size:.9rem}
     .footer a{color:#333;text-decoration:none}
   </style>
 </head>
 
 <body>
-
   <div class="announcement-bar">Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本</div>
 
-  <header class="navbar">
-    <a href="index.html" class="logo">HANA SKIN</a>
-    <ul class="nav-menu"><ul class="nav-menu">
- <ul class="nav-menu">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="index.html#categories">Shop</a></li>
-  <li><a href="cleansers.html">Cleansers</a></li>
-  <li><a href="masks.html">Masks</a></li>
-  <li><a href="oils.html">Oils</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="checkout.html">Checkout</a></li>
-</ul>
+  <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom">
+  <a class="navbar-brand font-weight-bold" href="index.html">HANA SKIN</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
 
-		</ul>
+  <div class="collapse navbar-collapse" id="navbarNav">
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+      <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
+      <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
+      <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
+      <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
+      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+      <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
     </ul>
-  </header>
+  </div>
+</nav>
 
-  
   <div class="category-hero">
     <h1>Masks</h1>
   </div>
 
- <section id="shop">
-  <section>
+  <section id="shop">
     <div class="grid-products">
-
      
       <div class="product-card">
         <div class="img-wrap-slide">
@@ -189,12 +216,11 @@
         </div>
       </div>
 	  </div> </section>
-  </section>
+  
 
-   <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="row">
-      
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
           <p>3‑14‑15 Ginza, Tokyo<br>+81 3‑1234‑5678<br>support@hanaskin.jp</p>
@@ -204,7 +230,6 @@
             <button>Subscribe</button>
           </div>
         </div>
-        <!-- Links -->
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">Quick Links</h5>
           <a href="index.html" class="footer-link d-block">Home</a>
@@ -212,19 +237,36 @@
           <a href="about.html" class="footer-link d-block">About</a>
           <a href="checkout.html" class="footer-link d-block">Checkout</a>
         </div>
-        <!-- Brand note -->
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">HANA SKIN</h5>
           <p>Minimal rituals, timeless results. Crafted in Japan with respect for skin and planet.</p>
         </div>
       </div>
       <div class="footer-bottom">
-        © 2025 HANA SKIN | <a href="#" class="footer-link">Privacy</a> | <a href="#" class="footer-link">Terms</a>
+        © 2025 HANA SKIN | <a href="#" class="footer-link">Privacy</a> | <a href="#" class="footer-link">Terms</a>
       </div>
     </div>
   </footer>
 
-  
+  <script>
+  document.querySelectorAll('.product-card').forEach(card => {
+    const button = card.querySelector('.add-to-cart');
+    const name = card.querySelector('h5').textContent;
+    const price = card.querySelector('p').textContent.replace(/[₹,/]/g, '').split(' ')[0];
+
+    button.addEventListener('click', () => {
+      let cart = JSON.parse(localStorage.getItem('hanaCart')) || [];
+      cart.push({ name, price });
+      localStorage.setItem('hanaCart', JSON.stringify(cart));
+
+      button.textContent = 'Added to Cart ✓';
+      button.style.background = '#ccc';
+      button.disabled = true;
+    });
+  });
+</script>
+
+
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
