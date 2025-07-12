@@ -12,13 +12,7 @@
     :root{--accent:#aa8673;--light-yellow:#fff9e6;}
     body{font-family:'Poppins',sans-serif;color:#333;}
     .announcement-bar{background:#f8f8f8;text-align:center;padding:10px 0;font-size:14px}
-   .navbar .container {
-  padding-left: 16px;
-  padding-right: 16px;
-}
-
-
-
+   
     .category-hero{
       background:url('masks-hero.jpg') center/cover no-repeat;
       height:90vh;display:flex;align-items:center;justify-content:center;text-align:center;color:#fff;
@@ -40,13 +34,8 @@
     .product-info{padding:14px 10px;text-align:left}
     .product-info h5{font-size:.95rem;font-weight:500;margin:0 0 4px}
     .product-info p{font-size:.85rem;color:#555;margin:0}
-@media (max-width: 768px) {
-  .grid-products {
-    flex-direction: column;
-    align-items: center;
-  }
-  .product-card {
-    width: 90% !important;
+
+ width: 90% !important;
   }
   .navbar {
     flex-direction: column;
@@ -251,10 +240,13 @@
   <script>
   document.querySelectorAll('.product-card').forEach(card => {
     const button = card.querySelector('.add-to-cart');
-    const name = card.querySelector('h5').textContent;
-    const price = card.querySelector('p').textContent.replace(/[₹,/]/g, '').split(' ')[0];
+    const name = card.querySelector('h5')?.textContent.trim();
+    const rawPrice = card.querySelector('p')?.textContent || '';
+    const price = parseInt(rawPrice.replace(/[^\d]/g, ''), 10);
 
     button.addEventListener('click', () => {
+      if (!name || isNaN(price)) return;
+
       let cart = JSON.parse(localStorage.getItem('hanaCart')) || [];
       cart.push({ name, price });
       localStorage.setItem('hanaCart', JSON.stringify(cart));
@@ -265,6 +257,8 @@
     });
   });
 </script>
+
+
 
 
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>

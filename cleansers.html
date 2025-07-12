@@ -138,11 +138,7 @@
       .product-card {
         width: 90% !important;
       }
-      .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        padding: 10px 20px;
-      }
+     
       .nav-menu {
         flex-direction: column;
         gap: 10px;
@@ -166,24 +162,29 @@
 <body>
   <div class="announcement-bar">Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本</div>
 
- <nav class="navbar navbar-expand-md navbar-light bg-light">
-  <a class="navbar-brand" href="index.html">HANA SKIN</a>
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarNav">
-    <ul class="navbar-nav ml-auto">
-      <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-      <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
-      <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
-      <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
-      <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
-      <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-      <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
-    </ul>
+ <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="index.html">HANA SKIN</a>
+
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
+        <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
+        <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+      </ul>
+    </div>
   </div>
 </nav>
+
 
 
   <div class="category-hero">
@@ -342,23 +343,22 @@
   
   <script>
   document.querySelectorAll('.add-to-cart').forEach(button => {
-    button.addEventListener('click', () => {
-      const card = button.closest('.product-card');
-      const name = card.querySelector('h5').innerText;
+  button.addEventListener('click', () => {
+    const name = button.dataset.name;
+    const price = parseInt(button.dataset.price, 10);  
 
-      const rawPrice = card.querySelector('p').innerText;
-      const numericPrice = rawPrice.replace(/[^\d]/g, '');
-      const price = parseInt(numericPrice, 10);
+    if (!name || isNaN(price)) return; 
 
-      const cart = JSON.parse(localStorage.getItem('hanaCart')) || [];
-      cart.push({ name, price });
-      localStorage.setItem('hanaCart', JSON.stringify(cart));
+    const cart = JSON.parse(localStorage.getItem('hanaCart')) || [];
+    cart.push({ name, price });
+    localStorage.setItem('hanaCart', JSON.stringify(cart));
 
-      button.innerText = "Added to Cart ✓";
-      button.style.background = "#d4bba8";
-      button.disabled = true;
-    });
+    button.innerText = "Added to Cart ✓";
+    button.style.background = "#d4bba8";
+    button.disabled = true;
   });
+});
+
 </script>
 
 

@@ -7,10 +7,16 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-    :root {
-      --accent: #aa8673;
-      --light-yellow: #fff9e6;
-    }
+	  :root {
+  --accent: #aa8673;
+  --light-yellow: #fff9e6;
+}
+
+.navbar .container {
+  padding-left: 16px;
+  padding-right: 16px;
+}
+
     * {
       box-sizing: border-box;
       margin: 0;
@@ -20,38 +26,22 @@
       font-family: 'Poppins', sans-serif;
       color: #333;
     }
-    .announcement-bar {
-      background: #f8f8f8;
-      text-align: center;
-      padding: 10px 0;
-      font-size: 14px;
-    }
-    .navbar {
-      background: #fff;
-      padding: 20px 40px;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      border-bottom: 1px solid #eee;
-      position: sticky;
-      top: 0;
-      z-index: 1000;
-    }
-    .logo {
-      font-weight: 600;
-      font-size: 20px;
-      text-decoration: none;
-      color: #000;
-    }
-    .nav-menu {
-      display: flex;
-      gap: 20px;
-      list-style: none;
-    }
-    .nav-menu a {
-      color: #000;
-      font-weight: 500;
-      text-decoration: none;
+		  
+body {
+  margin: 0;
+  padding: 0;
+}
+		  
+   .announcement-bar {
+  width: 100%;
+  background: #f8f8f8;
+  padding: 10px 0;
+  font-size: 14px;
+  text-align: center;
+  display: block;
+}
+
+
     }
     .carousel-item img {
       width: 100%;
@@ -246,31 +236,35 @@
     }
   </style>
 </head>
-<body><body>
+	
+    <body> <body>
+<div class="announcement-bar">
+  Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本
+</div>
 
-
-  <div class="announcement-bar">
-    Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本
+<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+  <div class="container">
+    <a class="navbar-brand font-weight-bold" href="#">HANA SKIN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    
+    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+      <ul class="navbar-nav">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="#categories">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
+        <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
+        <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+      </ul>
+    </div>
   </div>
+</nav>
 
  
-  <header class="navbar">
-    <a href="#" class="logo">HANA SKIN</a>
-    <ul class="nav-menu">
-       <ul class="nav-menu">
-  <ul class="nav-menu">
-  <li><a href="index.html">Home</a></li>
-  <li><a href="#categories">Shop</a></li>
-  <li><a href="cleansers.html">Cleansers</a></li>
-  <li><a href="masks.html">Masks</a></li>
-  <li><a href="oils.html">Oils</a></li>
-  <li><a href="about.html">About</a></li>
-  <li><a href="checkout.html">Checkout</a></li>
-</ul>
-
-		</ul>
-    </ul>
-  </header>
+  
 
   
   <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
@@ -342,14 +336,14 @@
   </section>
  
 
-  <!-- Extracts Section -->
+  
   <section class="extracts text-center py-5">
     <div class="container">
       <h2 class="mb-3">Innovative Formulations</h2>
       <p class="mb-5">Each formula is crafted with skin-loving botanical extracts deeply rooted in Japanese skincare heritage.</p>
       <div class="row justify-content-center">
-        <div class="col-md-4 mb-4">
-          <div class="extract">
+  <div class="col-10 col-sm-6 col-md-4 mb-4">
+    <div class="extract">
             <img src="extract01.jpg" alt="Green Tea" class="img-fluid mb-3" style="height:240px; object-fit:cover; width:100%">
             <h5>Green Tea</h5>
             <p>Rich in antioxidants, calms and protects skin.</p>
