@@ -7,63 +7,70 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
   <style>
-	  :root {
-  --accent: #aa8673;
-  --light-yellow: #fff9e6;
-}
-
-.navbar .container {
-  padding-left: 16px;
-  padding-right: 16px;
-}
+    :root {
+      --accent: #aa8673;
+      --light-yellow: #fff9e6;
+    }
 
     * {
       box-sizing: border-box;
       margin: 0;
       padding: 0;
     }
+
     body {
       font-family: 'Poppins', sans-serif;
       color: #333;
+      margin: 0;
+      padding: 0;
     }
-		  
-body {
-  margin: 0;
-  padding: 0;
-}
-		  
-   .announcement-bar {
-  width: 100%;
-  background: #f8f8f8;
-  padding: 10px 0;
-  font-size: 14px;
-  text-align: center;
-  display: block;
-}
 
-
+    .announcement-bar {
+      width: 100%;
+      background: #f8f8f8;
+      padding: 10px 0;
+      font-size: 14px;
+      text-align: center;
+      display: block;
     }
+
+    .navbar .container {
+      padding-left: 16px;
+      padding-right: 16px;
+    }
+
+    .carousel-item {
+      height: 90vh;
+    }
+
     .carousel-item img {
       width: 100%;
-      height: 90vh;
+      height: 100%;
       object-fit: cover;
+      object-position: center;
       transition: transform 6s ease;
+      display: block;
     }
+
     .carousel-item.active img {
       transform: scale(1.06);
     }
+
     .carousel-caption {
       bottom: 34%;
     }
+
     .carousel-caption h1 {
       font-size: 3rem;
       font-weight: 700;
       color: #fff;
     }
+
     .carousel-caption p {
       font-size: 1.1rem;
       color: #fff;
     }
+
     .carousel-caption .btn {
       margin-top: 18px;
       padding: 10px 22px;
@@ -72,25 +79,23 @@ body {
       background: #fff;
       color: #000;
     }
+
     .featured {
       padding: 70px 20px;
       text-align: center;
     }
-	  
-.img-wrap img,
-.cat-box img,
-.extract img {
-  transition: transform 0.3s ease;
-}
 
-.product-card .img-wrap:hover img,
-.cat-box:hover img,
-.extract:hover img {
-  transform: scale(1.05);
-}
+    .img-wrap img,
+    .cat-box img,
+    .extract img {
+      transition: transform 0.3s ease;
+    }
 
-
-
+    .product-card .img-wrap:hover img,
+    .cat-box:hover img,
+    .extract:hover img {
+      transform: scale(1.05);
+    }
 
     .grid-products {
       display: grid;
@@ -98,117 +103,124 @@ body {
       gap: 36px;
       max-width: 1200px;
       margin: 0 auto;
-		
-.product-card .add-to-cart {          
-  opacity: 0;
-}
+    }
 
-.product-card .img-wrap:hover .add-to-cart {
-  opacity: 1;                        
-}
+    .product-card .add-to-cart {
+      opacity: 0;
+    }
 
-}
-   .product-card {
-  border: 1px solid #eee;
-  height: 100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  transition: box-shadow 0.3s ease;
-}
-.img-wrap {
-  height: 300px;
-  overflow: hidden;
-}
-.img-wrap img {
-  width: 100%;
-  height: 300px;
-  object-fit: cover;
-  display: block;
-}
-.product-info {
-  padding: 14px 10px;
-  text-align: left;
-  min-height: 90px;
-}
+    .product-card .img-wrap:hover .add-to-cart {
+      opacity: 1;
+    }
 
-  .cat-box {
-  flex: 1;
-  background: #fff;
-  border: 1px solid #ddd;
-  border-radius: 6px;
-  padding: 0;
-  overflow: hidden;
-  text-align: center;
-  max-width: 350px;
-  display: flex;
-  flex-direction: column;
-}
+    .product-card {
+      border: 1px solid #eee;
+      height: 100%;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      transition: box-shadow 0.3s ease;
+    }
 
-.cat-box img {
-  width: 100%;
-  height: 220px;
-  object-fit: cover;
-  display: block;
-}
+    .img-wrap {
+      height: 300px;
+      overflow: hidden;
+    }
 
-.cat-box span {
-  font-size: 1.1rem;
-  font-weight: 600;
-  margin: 14px 0 4px;
-}
+    .img-wrap img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+      display: block;
+    }
 
-.cat-box p {
-  font-size: 0.9rem;
-  color: #555;
-  margin-bottom: 14px;
-  padding: 0 10px;
-}
+    .product-info {
+      padding: 14px 10px;
+      text-align: left;
+      min-height: 90px;
+    }
+
+    .cat-box {
+      flex: 1;
+      background: #fff;
+      border: 1px solid #ddd;
+      border-radius: 6px;
+      padding: 0;
+      overflow: hidden;
+      text-align: center;
+      max-width: 350px;
+      display: flex;
+      flex-direction: column;
+    }
+
+    .cat-box img {
+      width: 100%;
+      height: 220px;
+      object-fit: cover;
+      display: block;
+    }
+
+    .cat-box span {
+      font-size: 1.1rem;
+      font-weight: 600;
+      margin: 14px 0 4px;
+    }
+
+    .cat-box p {
+      font-size: 0.9rem;
+      color: #555;
+      margin-bottom: 14px;
+      padding: 0 10px;
+    }
 
     .extract {
-  width: 100%;
-  max-width: 280px;
-  text-align: center;
-  flex: 1;
-}
-
-.extract img {
-  width: 100%;
-  height: 180px;
-  object-fit: cover;
-  border-radius: 6px;
-  display: block;
-}
-.extract-grid {
-  display: flex;
-  justify-content: center;
-  gap: 30px;
-  flex-wrap: wrap;
-}
-
+      width: 100%;
+      max-width: 280px;
+      text-align: center;
+      flex: 1;
     }
+
+    .extract img {
+      width: 100%;
+      height: 180px;
+      object-fit: cover;
+      border-radius: 6px;
+      display: block;
+    }
+
+    .extract-grid {
+      display: flex;
+      justify-content: center;
+      gap: 30px;
+      flex-wrap: wrap;
+    }
+
     .footer {
       background: #f2f2f2;
       padding: 3rem 0 2rem;
       font-size: 0.9rem;
       color: #333;
     }
+
     .footer-link {
       color: #333;
       text-decoration: none;
       display: inline-block;
       margin-bottom: 6px;
     }
+
     .footer-link:hover {
       color: #aa8673;
       text-decoration: underline;
     }
+
     .subscribe-box {
       margin-top: 1rem;
       display: flex;
       gap: 10px;
       justify-content: center;
     }
+
     .subscribe-box input {
       flex: 1;
       padding: 0.5rem;
@@ -216,6 +228,7 @@ body {
       border-radius: 4px;
       max-width: 250px;
     }
+
     .subscribe-box button {
       padding: 0.5rem 1.2rem;
       background: var(--accent);
@@ -224,9 +237,11 @@ body {
       border-radius: 4px;
       font-weight: 700;
     }
+
     .subscribe-box button:hover {
       background: #8e6d5c;
     }
+
     .footer-bottom {
       border-top: 1px solid #ccc;
       margin-top: 2rem;
@@ -236,41 +251,37 @@ body {
     }
   </style>
 </head>
-	
-    <body> <body>
-<div class="announcement-bar">
-  Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本
-</div>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
-  <div class="container">
-    <a class="navbar-brand font-weight-bold" href="#">HANA SKIN</a>
-    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
-      <span class="navbar-toggler-icon"></span>
-    </button>
-    
-    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-      <ul class="navbar-nav">
-        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-        <li class="nav-item"><a class="nav-link" href="#categories">Shop</a></li>
-        <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
-        <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
-        <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
-        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
-      </ul>
-    </div>
+<body>
+  <div class="announcement-bar">
+    Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本
   </div>
-</nav>
 
- 
-  
+  <nav class="navbar navbar-expand-lg navbar-light bg-white sticky-top border-bottom">
+    <div class="container">
+      <a class="navbar-brand font-weight-bold" href="#">HANA SKIN</a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
-  
+      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+        <ul class="navbar-nav">
+          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#shop">Shop</a></li>
+          <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
+          <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
+          <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
+          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
   <div id="heroCarousel" class="carousel slide" data-ride="carousel" data-interval="2500">
     <div class="carousel-inner">
       <div class="carousel-item active">
-        <img src="hero01.jpg" alt="Hero 1" />
+        <img src="hero01.jpg" alt="Hero 1">
         <div class="carousel-caption">
           <h1>Glow in Silence</h1>
           <p>Timeless skincare rituals rooted in Japanese nature.</p>
@@ -278,7 +289,7 @@ body {
         </div>
       </div>
       <div class="carousel-item">
-        <img src="hero02.jpg" alt="Hero 2" />
+        <img src="hero02.jpg" alt="Hero 2">
         <div class="carousel-caption">
           <h1>Daily Care Made Simple</h1>
           <p>Balance. Calm. Restore.</p>
@@ -286,7 +297,7 @@ body {
         </div>
       </div>
       <div class="carousel-item">
-        <img src="hero03.jpg" alt="Hero 3" />
+        <img src="hero03.jpg" alt="Hero 3">
         <div class="carousel-caption">
           <h1>Crafted With Care</h1>
           <p>Clean ingredients, gentle formulas.</p>
@@ -296,10 +307,7 @@ body {
     </div>
   </div>
 
-	
-<section id="shop">
- 
-  <section class="categories text-center py-5" style="background:#f9f9f9">
+  <section id="shop" class="categories text-center py-5" style="background:#f9f9f9">
     <div class="container">
       <h2 class="mb-3">Shop by Category</h2>
       <p class="mb-5">Explore products crafted for every skin need</p>
@@ -307,7 +315,7 @@ body {
         <div class="col-md-4 mb-4">
           <a href="cleansers.html" style="text-decoration: none; color: inherit;">
             <div class="cat-box">
-              <img src="cat-cleansers.jpg" alt="Cleansers" class="img-fluid mb-3" style="height:280px; object-fit:cover; width:100%">
+              <img src="cat-cleansers.jpg" alt="Cleansers" class="img-fluid mb-3">
               <h5>Cleansers</h5>
               <p>Gentle oil & foam cleansers</p>
             </div>
@@ -316,7 +324,7 @@ body {
         <div class="col-md-4 mb-4">
           <a href="masks.html" style="text-decoration: none; color: inherit;">
             <div class="cat-box">
-              <img src="cat-masks.jpg" alt="Masks" class="img-fluid mb-3" style="height:280px; object-fit:cover; width:100%">
+              <img src="cat-masks.jpg" alt="Masks" class="img-fluid mb-3">
               <h5>Masks</h5>
               <p>Purifying clay & sheet masks</p>
             </div>
@@ -325,40 +333,38 @@ body {
         <div class="col-md-4 mb-4">
           <a href="oils.html" style="text-decoration: none; color: inherit;">
             <div class="cat-box">
-              <img src="cat-oils.jpg" alt="Oils" class="img-fluid mb-3" style="height:280px; object-fit:cover; width:100%">
+              <img src="cat-oils.jpg" alt="Oils" class="img-fluid mb-3">
               <h5>Oils</h5>
               <p>Botanical blends for nourishment</p>
             </div>
           </a>
         </div>
       </div>
-    </div></section>
+    </div>
   </section>
- 
 
-  
   <section class="extracts text-center py-5">
     <div class="container">
       <h2 class="mb-3">Innovative Formulations</h2>
       <p class="mb-5">Each formula is crafted with skin-loving botanical extracts deeply rooted in Japanese skincare heritage.</p>
       <div class="row justify-content-center">
-  <div class="col-10 col-sm-6 col-md-4 mb-4">
-    <div class="extract">
-            <img src="extract01.jpg" alt="Green Tea" class="img-fluid mb-3" style="height:240px; object-fit:cover; width:100%">
+        <div class="col-10 col-sm-6 col-md-4 mb-4">
+          <div class="extract">
+            <img src="extract01.jpg" alt="Green Tea" class="img-fluid mb-3">
             <h5>Green Tea</h5>
             <p>Rich in antioxidants, calms and protects skin.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="extract">
-            <img src="extract02.jpg" alt="Rice Water" class="img-fluid mb-3" style="height:240px; object-fit:cover; width:100%">
+            <img src="extract02.jpg" alt="Rice Water" class="img-fluid mb-3">
             <h5>Rice Water</h5>
             <p>Brightens and balances skin tone.</p>
           </div>
         </div>
         <div class="col-md-4 mb-4">
           <div class="extract">
-            <img src="extract03.jpg" alt="Camellia Oil" class="img-fluid mb-3" style="height:240px; object-fit:cover; width:100%">
+            <img src="extract03.jpg" alt="Camellia Oil" class="img-fluid mb-3">
             <h5>Camellia Oil</h5>
             <p>Deeply nourishes and repairs skin.</p>
           </div>
@@ -366,13 +372,10 @@ body {
       </div>
     </div>
   </section>
-</body>
 
-
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="row">
-      
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
           <p>3‑14‑15 Ginza, Tokyo<br>+81 3‑1234‑5678<br>support@hanaskin.jp</p>
@@ -382,7 +385,6 @@ body {
             <button>Subscribe</button>
           </div>
         </div>
-        <!-- Links -->
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">Quick Links</h5>
           <a href="index.html" class="footer-link d-block">Home</a>
@@ -390,7 +392,6 @@ body {
           <a href="about.html" class="footer-link d-block">About</a>
           <a href="checkout.html" class="footer-link d-block">Checkout</a>
         </div>
-        <!-- Brand note -->
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">HANA SKIN</h5>
           <p>Minimal rituals, timeless results. Crafted in Japan with respect for skin and planet.</p>
@@ -402,7 +403,6 @@ body {
     </div>
   </footer>
 
-  
   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
 </body>
