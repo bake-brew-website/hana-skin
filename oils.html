@@ -5,32 +5,28 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Oils • HANA SKIN</title>
 
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" />
 
   <style>
     :root {
       --accent: #aa8673;
       --light-yellow: #fff9e6;
     }
-
     body {
       font-family: 'Poppins', sans-serif;
       color: #333;
     }
-
     .announcement-bar {
       background: #f8f8f8;
       text-align: center;
       padding: 10px 0;
       font-size: 14px;
     }
-
     .navbar .container {
       padding-left: 16px;
       padding-right: 16px;
     }
-
     .category-hero {
       background: url('oils-hero.jpg') center/cover no-repeat;
       height: 90vh;
@@ -40,7 +36,6 @@
       text-align: center;
       color: #fff;
     }
-
     .grid-products {
       display: flex;
       flex-wrap: wrap;
@@ -50,7 +45,6 @@
       margin: 0 auto;
       padding: 60px 20px;
     }
-
     .product-card {
       width: 300px;
       border: 1px solid #eee;
@@ -59,17 +53,14 @@
       background: #fff;
       transition: box-shadow 0.3s;
     }
-
     .product-card:hover {
       box-shadow: 0 6px 16px rgba(0, 0, 0, 0.1);
     }
-
     .img-wrap-slide {
       position: relative;
       height: 360px;
       overflow: hidden;
     }
-
     .img-wrap-slide img {
       position: absolute;
       top: 0;
@@ -79,25 +70,20 @@
       object-fit: cover;
       transition: transform 0.6s ease;
     }
-
     .img-wrap-slide .main-img {
       z-index: 1;
       transform: translateX(0);
     }
-
     .img-wrap-slide .hover-img {
       z-index: 2;
       transform: translateX(100%);
     }
-
     .img-wrap-slide:hover .main-img {
       transform: translateX(-100%);
     }
-
     .img-wrap-slide:hover .hover-img {
       transform: translateX(0);
     }
-
     .add-to-cart {
       position: absolute;
       bottom: 0;
@@ -113,40 +99,33 @@
       transition: opacity 0.3s;
       cursor: pointer;
     }
-
     .img-wrap-slide:hover .add-to-cart {
       opacity: 1;
     }
-
     .product-info {
       padding: 14px 10px;
       text-align: left;
     }
-
     .product-info h5 {
       font-size: 0.95rem;
       font-weight: 500;
       margin: 0 0 4px;
     }
-
     .product-info p {
       font-size: 0.85rem;
       color: #555;
       margin: 0;
     }
-
     .footer {
       background: #f2f2f2;
       padding: 2rem 0;
       text-align: center;
       font-size: 0.9rem;
     }
-
     .footer a {
       color: #333;
       text-decoration: none;
     }
-
     /* Mobile Fixes */
     @media (max-width: 768px) {
       .grid-products {
@@ -154,17 +133,24 @@
         align-items: center;
       }
       .product-card {
-        width: 90%;
+        width: 90% !important;
+      }
+      .navbar {
+        flex-direction: column;
+        align-items: flex-start;
+        padding: 10px 20px;
       }
       .category-hero {
-        height: 60vh;
+        height: 50vh;
         font-size: 1.5rem;
         padding: 20px;
       }
-      .subscribe-box input,
-      .subscribe-box button {
+      .subscribe-box input {
         width: 100%;
         margin-bottom: 8px;
+      }
+      .subscribe-box button {
+        width: 100%;
       }
     }
   </style>
@@ -174,24 +160,22 @@
   <div class="announcement-bar">Free shipping on orders over ₹2,500 ・ Inspired by Japan 日本</div>
 
   <nav class="navbar navbar-expand-md navbar-light bg-white sticky-top border-bottom">
-    <div class="container">
-      <a class="navbar-brand font-weight-bold" href="index.html">HANA SKIN</a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
-        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
+    <a class="navbar-brand font-weight-bold" href="index.html">HANA SKIN</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+      aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
 
-      <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
-        <ul class="navbar-nav">
-          <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
-          <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
-          <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
-          <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
-          <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
-          <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
-          <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
-        </ul>
-      </div>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+        <li class="nav-item"><a class="nav-link" href="index.html#categories">Shop</a></li>
+        <li class="nav-item"><a class="nav-link" href="cleansers.html">Cleansers</a></li>
+        <li class="nav-item"><a class="nav-link" href="masks.html">Masks</a></li>
+        <li class="nav-item"><a class="nav-link" href="oils.html">Oils</a></li>
+        <li class="nav-item"><a class="nav-link" href="about.html">About</a></li>
+        <li class="nav-item"><a class="nav-link" href="checkout.html">Checkout</a></li>
+      </ul>
     </div>
   </nav>
 
@@ -202,11 +186,10 @@
   <section id="shop">
     <div class="grid-products">
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil1.jpg"  alt="Camellia Oil" class="main-img">
-          <img src="oil2.jpg" alt="Camellia Oil Hover" class="hover-img">
+          <img src="oil1.jpg" alt="Camellia Oil" class="main-img" />
+          <img src="oil2.jpg" alt="Camellia Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -215,11 +198,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil3.jpg"  alt="Rice Bran Oil" class="main-img">
-          <img src="oil4.jpg" alt="Rice Bran Oil Hover" class="hover-img">
+          <img src="oil3.jpg" alt="Rice Bran Oil" class="main-img" />
+          <img src="oil4.jpg" alt="Rice Bran Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -228,11 +210,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil5.jpg"  alt="Sakura Oil" class="main-img">
-          <img src="oil6.jpg" alt="Sakura Oil Hover" class="hover-img">
+          <img src="oil5.jpg" alt="Sakura Oil" class="main-img" />
+          <img src="oil6.jpg" alt="Sakura Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -241,11 +222,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil7.jpg"  alt="Yuzu Brightening Oil" class="main-img">
-          <img src="oil8.jpg" alt="Yuzu Brightening Oil Hover" class="hover-img">
+          <img src="oil7.jpg" alt="Yuzu Brightening Oil" class="main-img" />
+          <img src="oil8.jpg" alt="Yuzu Brightening Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -254,11 +234,10 @@
         </div>
       </div>
 
-     
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil9.jpg"  alt="Sea Minerals Oil" class="main-img">
-          <img src="oil10.jpg" alt="Sea Minerals Oil Hover" class="hover-img">
+          <img src="oil9.jpg" alt="Sea Minerals Oil" class="main-img" />
+          <img src="oil10.jpg" alt="Sea Minerals Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -267,11 +246,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil11.jpg"  alt="Hinoki Balancing Oil" class="main-img">
-          <img src="oil12.jpg" alt="Hinoki Balancing Oil Hover" class="hover-img">
+          <img src="oil11.jpg" alt="Hinoki Balancing Oil" class="main-img" />
+          <img src="oil12.jpg" alt="Hinoki Balancing Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -280,11 +258,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil13.jpg"  alt="Pearl Essence Oil" class="main-img">
-          <img src="oil14.jpg" alt="Pearl Essence Oil Hover" class="hover-img">
+          <img src="oil13.jpg" alt="Pearl Essence Oil" class="main-img" />
+          <img src="oil14.jpg" alt="Pearl Essence Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -293,11 +270,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil15.jpg"  alt="Kombu Nourishing Oil" class="main-img">
-          <img src="oil16.jpg" alt="Kombu Nourishing Oil Hover" class="hover-img">
+          <img src="oil15.jpg" alt="Kombu Nourishing Oil" class="main-img" />
+          <img src="oil16.jpg" alt="Kombu Nourishing Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -306,11 +282,10 @@
         </div>
       </div>
 
-      
       <div class="product-card">
         <div class="img-wrap-slide">
-          <img src="oil17.jpg"  alt="Matcha Antioxidant Oil" class="main-img">
-          <img src="oil18.jpg" alt="Matcha Antioxidant Oil Hover" class="hover-img">
+          <img src="oil17.jpg" alt="Matcha Antioxidant Oil" class="main-img" />
+          <img src="oil18.jpg" alt="Matcha Antioxidant Oil Hover" class="hover-img" />
           <button class="add-to-cart">Add to Cart</button>
         </div>
         <div class="product-info">
@@ -319,18 +294,18 @@
         </div>
       </div>
 
-	  </div></section>
-  
+    </div>
+  </section>
 
-    <footer class="footer">
+  <footer class="footer">
     <div class="container">
       <div class="row">
         <div class="col-md-4 mb-4">
           <h5 class="text-uppercase font-weight-bold">Contact Us</h5>
-          <p>3‑14‑15 Ginza, Tokyo<br>+81 3‑1234‑5678<br>support@hanaskin.jp</p>
+          <p>3‑14‑15 Ginza, Tokyo<br />+81 3‑1234‑5678<br />support@hanaskin.jp</p>
           <p class="mt-3 font-weight-bold">Get HANA SKIN in your mail</p>
           <div class="subscribe-box">
-            <input type="email" placeholder="Enter your email">
+            <input type="email" placeholder="Enter your email" />
             <button>Subscribe</button>
           </div>
         </div>
@@ -353,20 +328,18 @@
   </footer>
 
   <script>
-    document.querySelectorAll('.add-to-cart').forEach(button => {
+    document.querySelectorAll('.product-card').forEach(card => {
+      const button = card.querySelector('.add-to-cart');
+      const name = card.querySelector('h5').textContent;
+      const price = card.querySelector('p').textContent.replace(/[₹,/]/g, '').split(' ')[0];
+
       button.addEventListener('click', () => {
-        const productCard = button.closest('.product-card');
-        const name = productCard.querySelector('h5').innerText;
-
-        const rawPrice = productCard.querySelector('p').innerText;
-        const numericPrice = rawPrice.replace(/[^\d]/g, '');
-
-        const cart = JSON.parse(localStorage.getItem('hanaCart')) || [];
-        cart.push({ name, price: numericPrice });
+        let cart = JSON.parse(localStorage.getItem('hanaCart')) || [];
+        cart.push({ name, price });
         localStorage.setItem('hanaCart', JSON.stringify(cart));
 
-        button.innerText = "Added to Cart ✓";
-        button.style.background = "#d4bba8";
+        button.textContent = 'Added to Cart ✓';
+        button.style.background = '#ccc';
         button.disabled = true;
       });
     });
